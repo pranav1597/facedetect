@@ -93,7 +93,7 @@ loadUser = (data) => {
 
   onSubmitButton = () => {
     this.setState({imageUrl: this.state.input})
-      fetch('http://localhost:3001/profile/imageurl', {
+      fetch('https://tranquil-lowlands-36575.herokuapp.com/profile/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -103,7 +103,7 @@ loadUser = (data) => {
       .then(response => response.json())
       .then(response => {
         if(response) {
-          fetch('http://localhost:3001/profile/image', {
+          fetch('https://tranquil-lowlands-36575.herokuapp.com/profile/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
